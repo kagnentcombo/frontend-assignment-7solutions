@@ -135,7 +135,7 @@ const Solution2Page = () => {
         <div>
             {Object.entries(departmentData).map(([department, data]) => (
                 <div key={department}>
-                    <pre>{JSON.stringify({ [department]: data }, null, 2)}</pre>
+                    <pre>{JSON.stringify({ [department]: data }, null, 2)},</pre>
                 </div>
             ))}
         </div>
