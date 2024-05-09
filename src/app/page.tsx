@@ -104,46 +104,48 @@ function App() {
   }
   return (
     <>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
-
-        <div style={{ display: "flex", flexDirection: "column", margin: "20px", gap: "10px" }}>
-          {all.map((item) => <button key={item.name} onClick={() => moveButton(item)} style={{ padding: "15px", backgroundColor: "#fff", border: "solid 1px #C7C8CC", cursor: "pointer",whiteSpace: "nowrap" }}>
-            <p style={{ fontWeight: "700", fontSize: "14px" }}>{item.name}</p>
-          </button>
-          )}
-        </div>
-        <div
-
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            margin: "20px",
-            border: "solid 1px #C7C8CC",
-            gap: "10px"
-          }}><div style={{ backgroundColor: "#C7C8CC", padding: "15px", display: "flex", justifyContent: "center" }}>
-            <p style={{ fontWeight: "700", fontSize: "18px" }}>Fruit</p>
+      <div>
+        <div style={{padding:"20px"}}><a href="/solution2">solution2</a></div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+          <div style={{ display: "flex", flexDirection: "column", margin: "20px", gap: "10px" }}>
+            {all.map((item) => <button key={item.name} onClick={() => moveButton(item)} style={{ padding: "15px", backgroundColor: "#fff", border: "solid 1px #C7C8CC", cursor: "pointer", whiteSpace: "nowrap" }}>
+              <p style={{ fontWeight: "700", fontSize: "14px" }}>{item.name}</p>
+            </button>
+            )}
           </div>
-          {fruits.map((fruit, index) => (
-            <div key={fruit.name} style={{ display: "flex", justifyContent: "center" }}><button onClick={() => moveBack(fruit)} style={{ padding: "15px", backgroundColor: "#fff", border: "solid 1px #C7C8CC", width: "80%", cursor: "pointer",whiteSpace: "nowrap" }}>
-              {fruit.name}
-            </button></div>
-          ))}
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            margin: "20px",
-            border: "solid 1px #C7C8CC",
-            gap: "10px"
-          }}><div style={{ backgroundColor: "#C7C8CC", padding: "15px", display: "flex", justifyContent: "center" }}>
-            <p style={{ fontWeight: "700", fontSize: "18px" }}>Vegetable</p>
+          <div
+
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              margin: "20px",
+              border: "solid 1px #C7C8CC",
+              gap: "10px"
+            }}><div style={{ backgroundColor: "#C7C8CC", padding: "15px", display: "flex", justifyContent: "center" }}>
+              <p style={{ fontWeight: "700", fontSize: "18px" }}>Fruit</p>
+            </div>
+            {fruits.map((fruit, index) => (
+              <div key={fruit.name} style={{ display: "flex", justifyContent: "center" }}><button onClick={() => moveBack(fruit)} style={{ padding: "15px", backgroundColor: "#fff", border: "solid 1px #C7C8CC", width: "80%", cursor: "pointer", whiteSpace: "nowrap" }}>
+                {fruit.name}
+              </button></div>
+            ))}
           </div>
-          {vegetables.map((vegetables, index) => (
-            <div key={vegetables.name} style={{ display: "flex", justifyContent: "center" }}><button onClick={() => moveBack(vegetables)} style={{ padding: "15px", backgroundColor: "#fff", border: "solid 1px #C7C8CC", width: "80%", cursor: "pointer",whiteSpace: "nowrap" }}>
-              {vegetables.name}
-            </button></div>
-          ))}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              margin: "20px",
+              border: "solid 1px #C7C8CC",
+              gap: "10px"
+            }}><div style={{ backgroundColor: "#C7C8CC", padding: "15px", display: "flex", justifyContent: "center" }}>
+              <p style={{ fontWeight: "700", fontSize: "18px" }}>Vegetable</p>
+            </div>
+            {vegetables.map((vegetables, index) => (
+              <div key={vegetables.name} style={{ display: "flex", justifyContent: "center" }}><button onClick={() => moveBack(vegetables)} style={{ padding: "15px", backgroundColor: "#fff", border: "solid 1px #C7C8CC", width: "80%", cursor: "pointer", whiteSpace: "nowrap" }}>
+                {vegetables.name}
+              </button></div>
+            ))}
+          </div>
         </div>
       </div>
     </>
